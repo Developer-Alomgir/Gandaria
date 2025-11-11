@@ -1,0 +1,1 @@
+Images are hotlinked in pages/gallery.js; add local files under public/images and update gallery if desired.

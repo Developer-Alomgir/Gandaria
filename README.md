@@ -1,0 +1,1 @@
+# Our Gandaria (Next.js) - Animated Frontend\n\nThis project is an enhanced version with hero, info, gallery and footer.\n
