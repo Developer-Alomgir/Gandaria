@@ -1,11 +1,20 @@
 import '../styles/globals.css'
-import { Analytics } from '@vercel/analytics/react'
-
-export default function MyApp({ Component, pageProps }) {
+import { Analytics } from '@vercel/analytics/next';
+ 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <>
-      <Component {...pageProps} />
-      <Analytics />
-    </>
-  )
+    <html lang="en">
+      <head>
+        <title>Next.js</title>
+      </head>
+      <body>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  );
 }
