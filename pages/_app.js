@@ -1,11 +1,11 @@
 import '../styles/globals.css'
-import Footer from '../components/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
-      <Footer />
+      <Analytics />
     </>
   )
 }
