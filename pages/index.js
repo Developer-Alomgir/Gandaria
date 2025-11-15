@@ -131,26 +131,6 @@ export default function Home() {
       </section>
 
 
-
-      {/* SKILLS MARQUEE */}
-      <section className="skills-section">
-        <h4 className="section-title">Skills</h4>
-
-        <div
-          className="skills-marquee"
-          onMouseDown={(e) => startDrag(e.clientX)}
-          onMouseMove={(e) => isDragging && moveDrag(e.clientX)}
-          onMouseUp={endDrag}
-          onMouseLeave={endDrag}
-        >
-          <div className="skills-track" style={{ transform: `translateX(${offset}px)` }}>
-            {skills.concat(skills).map((skill, idx) => (
-              <div key={idx} className="skill-card">{skill}</div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* QUICK FACT SECTION */}
       <section className="info-preview">
         <h4>Quick Facts & History</h4>
@@ -171,7 +151,26 @@ export default function Home() {
             <p>Build Dynamic Interactive Web Apps With React And Next.</p>
           </article>
         </div>
+      </section>
 
+
+      {/* SKILLS MARQUEE */}
+      <section className="skills-section">
+        <h4 className="section-title">Skills</h4>
+
+        <div
+          className="skills-marquee"
+          onMouseDown={(e) => startDrag(e.clientX)}
+          onMouseMove={(e) => isDragging && moveDrag(e.clientX)}
+          onMouseUp={endDrag}
+          onMouseLeave={endDrag}
+        >
+          <div className="skills-track" style={{ transform: `translateX(${offset}px)` }}>
+            {skills.concat(skills).map((skill, idx) => (
+              <div key={idx} className="skill-card">{skill}</div>
+            ))}
+          </div>
+        </div>
 
         <style jsx>{`
           .skills-section {
