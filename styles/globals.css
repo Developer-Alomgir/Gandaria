@@ -33,4 +33,12 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetic
 .lightbox img{max-width:96%;max-height:86%;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,0.7)}
 .site-footer{margin-top:36px;padding:18px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);text-align:center}
 a{color:var(--accent)}
-@media (max-width:880px){.hero{grid-template-columns:1fr;padding:20px}.hero-lead{max-width:100%}}
+@media (max-width:880px){.hero{grid-template-columns:1fr;padding:20px}.hero-lead{max-width:100%}
+                        body {
+  padding-bottom: 70px; /* footer er height + কিছু extra gap */
+  background: #111;
+  color: #fff;
+  margin: 0;
+}
+
+                        }
