@@ -8,6 +8,16 @@ const typePhrases = [
   'Game Developer and Graphic Designer'
 ]
 
+const skills = [
+  'React.Js',
+  'Node.Js',
+  'Next.Js',
+  'Webflow',
+  'Tailwind.CSS',
+  'HTML',
+  'Github'
+]
+
 export default function Home() {
   const [i, setI] = useState(0)
   const [display, setDisplay] = useState('')
@@ -68,11 +78,11 @@ export default function Home() {
         <motion.div className="facts-grid" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1.15}}>
           <article className="fact">
             <h5>Full Stack Software Engineer</h5>
-            <p>Experienced full stack developer specializing in modern web technologies. Expert in React, Node.js, and cloud architecture. Passionate about building scalable applications and mentoring junior developers..</p>
+            <p>Experienced full stack developer specializing in modern web technologies. Expert in React, Node.js, and cloud architecture. Passionate about building scalable applications and mentoring junior developers.</p>
           </article>
           <article className="fact">
             <h5>Game Developer</h5>
-            <p>Developed successful video games using Unity 3D, Unreal Engine and Cocos2D.Designed game features, levels, characters and optimized performance</p>
+            <p>Developed successful video games using Unity 3D, Unreal Engine and Cocos2D. Designed game features, levels, characters and optimized performance.</p>
           </article>
           <article className="fact">
             <h5>Web App Developer</h5>
@@ -83,6 +93,55 @@ export default function Home() {
           Sources: Wikipedia, The Daily Star (local history articles) — content summarised for this frontend demo.
         </motion.p>
       </section>
+
+      {/* ======= Skills Section ======= */}
+      <section className="skills-section">
+        <h4 className="section-title">Skills</h4>
+        <div className="skills-marquee">
+          <div className="skills-track">
+            {skills.concat(skills).map((skill, idx) => (
+              <div key={idx} className="skill-card">{skill}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .skills-section {
+          margin-top: 3rem;
+          overflow: hidden;
+          position: relative;
+          background: #f8f8f8;
+          padding: 1rem 0;
+        }
+        .section-title {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .skills-marquee {
+          display: flex;
+          overflow: hidden;
+          width: 100%;
+        }
+        .skills-track {
+          display: flex;
+          animation: marquee 15s linear infinite;
+        }
+        .skill-card {
+          flex: 0 0 auto;
+          margin: 0 1rem;
+          padding: 0.5rem 1rem;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+          white-space: nowrap;
+        }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </main>
   )
 }
