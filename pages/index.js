@@ -19,22 +19,42 @@ const skills = [
 ]
 
 export default function Home() {
-  const [i, setI] = useState(0)
-  const [display, setDisplay] = useState('')
+  // Marquee scrolling + drag logic
+const [offset, setOffset] = useState(0)
+const [isDragging, setIsDragging] = useState(false)
+const [startX, setStartX] = useState(0)
 
-  useEffect(()=>{
-    let mounted = true
-    const run = async ()=>{
-      while(mounted){
-        const phrase = typePhrases[i]
-        for(let k=1;k<=phrase.length;k++){
-          if(!mounted) return
-          setDisplay(phrase.slice(0,k))
-          await new Promise(r=>setTimeout(r,35))
-        }
-        await new Promise(r=>setTimeout(r,800))
-        for(let k=phrase.length;k>=0;k--){
-          if(!mounted) return
+useEffect(() => {
+  let frame
+  const speed = 0.6
+
+  const loop = () => {
+    setOffset(prev => {
+      const nextX = prev - speed
+      return nextX <= -800 ? 0 : nextX
+    })
+    frame = requestAnimationFrame(loop)
+  }
+
+  loop()
+  return () => cancelAnimationFrame(frame)
+}, [])
+
+const startDrag = (x) => {
+  setIsDragging(true)
+  setStartX(x)
+}
+
+const moveDrag = (x) => {
+  if (!isDragging) return
+  setOffset(prev => prev + (x - startX))
+  setStartX(x)
+}
+
+const endDrag = () => {
+  setIsDragging(false)
+}
+ return
           setDisplay(phrase.slice(0,k))
           await new Promise(r=>setTimeout(r,20))
         }
