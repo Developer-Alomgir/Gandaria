@@ -177,7 +177,7 @@ export default function Home() {
             margin-top: 3rem;
             overflow: hidden;
             background: #121212;
-            padding: 2.5rem 0;
+            padding: 3.5rem 0;
           }
           .section-title {
             text-align: center;
