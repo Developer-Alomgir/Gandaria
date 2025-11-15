@@ -136,10 +136,35 @@ export default function Home() {
           border-radius: 8px;
           box-shadow: 0 2px 6px rgba(0,0,0,0.1);
           white-space: nowrap;
+          font-size: 1rem;
+          transition: transform 0.3s;
+        }
+        .skill-card:hover {
+          transform: scale(1.05);
         }
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
+        }
+
+        /* ===== Responsive Styles ===== */
+        @media (max-width: 1024px) {
+          .skill-card {
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+          }
+          .skills-track {
+            animation-duration: 20s; /* slower on tablet */
+          }
+        }
+        @media (max-width: 640px) {
+          .skill-card {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.6rem;
+          }
+          .skills-track {
+            animation-duration: 25s; /* slower on mobile */
+          }
         }
       `}</style>
     </main>
