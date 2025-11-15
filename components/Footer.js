@@ -6,17 +6,17 @@ export default function Footer() {
         bottom: 0,
         left: 0,
         width: '100%',
-        height: '50px',        // ✅ Match the paddingBottom above
-        lineHeight: '50px',    // vertically center text
+        height: '60px',
+        lineHeight: '60px',
         textAlign: 'center',
-        backgroundColor: '#f0f0f0',
-        borderTop: '1px solid #ddd',
+        backgroundColor: '#1a1a1a',
+        borderTop: '1px solid #333',
         fontSize: '0.9rem',
-        color: '#333',
+        color: '#fff',
         zIndex: 1000,
       }}
     >
       Build By AlomgiR HosseN
     </footer>
-  )
+  );
 }
