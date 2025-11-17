@@ -4,23 +4,23 @@ import { motion } from 'framer-motion'
 export default function Info() {
   return (
     <>
-      <Head><title>Our Gandaria — Info</title></Head>
+      <Head><title>My Biography</title></Head>
       <main className="container">
-        <motion.h2 initial={{opacity:0}} animate={{opacity:1}}>Gandaria — History & Highlights</motion.h2>
+        <motion.h2 initial={{opacity:0}} animate={{opacity:1}}>I am ALOMGIR HOSSEN</motion.h2>
 
         <motion.section className="info-card" initial={{opacity:0, y:8}} animate={{opacity:1}} transition={{delay:0.2}}>
-          <h3>Short History</h3>
+          <h3>FullStack Software Developer</h3>
           <p>
-            Gandaria (Gendaria) is an old part of Dhaka with historical roots in agriculture — the name is often linked to sugarcane ('gandari').
-            Over time it became residential and a transport node with the Gandaria Railway Station. The area hosts several local institutions,
-            markets and community organisations.
+            Specialized in frontend design, development, and animation.
+            expertise in React.JS,Next.JS, Node.JS, Git, Tailwind CSS, Javascript,Typescript, HTML, Data Structure,
+            cross-platform App Development Like- Android,IOS,Windows Platfrom. Creating immersive Visual experiences through cutting-edge technology, Interactive Animation and creative vision..
           </p>
 
-          <h4>Notable places</h4>
+          <h4>My Home Office</h4>
           <ul>
-            <li>Gandaria Railway Station</li>
-            <li>Local mosques and madrasas</li>
-            <li>Markets, schools and community centers</li>
+            <li>Gandaria New Road</li>
+            <li>Dhaka South City Corporation 1204</li>
+            <li>Contact - Alomgir.Dev@Gmail.com</li>
           </ul>
         </motion.section>
 
